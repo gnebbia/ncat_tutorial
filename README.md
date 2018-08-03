@@ -1,13 +1,4 @@
-<!--
-.. title: ncat Tutorial
-.. slug: index
-.. date: 2018-07-06 13:54:00 UTC+02:00
-.. tags: 
-.. category: 
-.. link: 
-.. description: 
-.. type: text
--->
+# Ncat Tutorial
 
 ## Introduction
 
@@ -39,8 +30,8 @@ will send the packets to all client, while if we use the UDP
 option, we'll send data only to the first connected client, 
 since in UDP, there is no list of "connected" clients concept
 
-```sh 
- # ncat -l 192.168.1.105 3333 
+```sh
+ncat -l 192.168.1.105 3333 
 ```
 
 Let's see some variations on this:
@@ -111,12 +102,12 @@ ncat -l localhost 8080 < hello.http
  # in this case we create a 
  # web server, on the port 8080, where "hello.http" is the file 
  # serving the html page, in the format shown below:
- #  # HTTP/1.0 200 OK
- #  #  #  # <html>
- #  # <body>
- #  # <h1> CIAO </h1>
- #  # </body>
- #  # </html>
+ #  HTTP/1.0 200 OK
+ #  <html>
+ #  <body>
+ #  <h1> CIAO </h1>
+ #  </body>
+ #  </html>
 ```
 
 Basically we put the first mandatory string, used in the 
@@ -161,8 +152,7 @@ ncat -C --ssl-verify <server> 443
 ```
 
 ```sh
- # ncat -C --ssl-verify --ssl-trustfile <custom-certs.pem> <server> 
-443 
+ ncat -C --ssl-verify --ssl-trustfile <custom-certs.pem> <server> 443 
  # if we want to verify a connection to a server whose 
  # certificate isn't signed by one of the deafault certification 
  # authorities, use the --ssl-trustfile to name a file containing 
@@ -173,8 +163,7 @@ ncat -C --ssl-verify <server> 443
 
 ```sh
 ncat -l --exec "/bin/echo Hello." localhost 3333
- # this command 
- # builds an echo server, when an host is connected to this 
+ # this command builds an echo server, when an host is connected to this 
  # server, the "Hello" string is printed
 ```
 
@@ -212,7 +201,7 @@ done with:
 or if we want to save everything to a file we do:
 
 ```sh
- # printf "HEAD / HTTP/1.0\r\n\r\n" |nc 10.1.1.2 80 > myfile.txt
+printf "HEAD / HTTP/1.0\r\n\r\n" |nc 10.1.1.2 80 > myfile.txt
 ```
 
 ### Access Control
@@ -251,11 +240,11 @@ ncat -l --allow 192.179.0.0-200
 we can even deny or allow hosts specified in a file with:
 
 ```sh
- # ncat -l --allowfile trusted-hosts.txt
+ ncat -l --allowfile trusted-hosts.txt
 ```
 
-```sh 
- # ncat -l --denyfile external-hosts.txt
+```sh
+ ncat -l --denyfile external-hosts.txt
 ```
 
 we can even simply limit the maximum number of accepted 
