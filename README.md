@@ -91,8 +91,7 @@ to be able to connect to HTTPS websites we can execute:
 
 ```sh
 ncat -C --ssl www.google.it 443 
- # mi connetto ad un webserver 
- # sulla porta 443
+ # mi connetto ad un webserver sulla porta 443
 ```
 
 ### Web Server
