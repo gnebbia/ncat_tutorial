@@ -194,7 +194,7 @@ an alternative could be sending a string to netcat, this can be
 done with:
 
 ```sh
- # printf "HEAD / HTTP/1.0\r\n\r\n" | nc 10.1.1.2 80
+printf "HEAD / HTTP/1.0\r\n\r\n" | nc 10.1.1.2 80
 ```
 
 or if we want to save everything to a file we do:
