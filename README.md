@@ -207,7 +207,7 @@ printf "HEAD / HTTP/1.0\r\n\r\n" |nc 10.1.1.2 80 > myfile.txt
 ### Access Control
 
 A listening Ncat may control which hosts connect to it with the 
---allow and --deny, let's make some examples:
+`--allow` and `--deny`, let's make some examples:
 
 ```sh
 ncat -l --allow 192.168.0.125 localhost 3333 
@@ -216,7 +216,7 @@ ncat -l --allow 192.168.0.125 localhost 3333
 ```
 
 ```sh
- # ncat -l --allow trusted.example.com localhost 3333
+ ncat -l --allow trusted.example.com localhost 3333
 ```
 
 ```sh
@@ -258,18 +258,11 @@ ncat -l --max-conns 5
 
 Other useful options are:
 
-```sh
---nodns 
- # tells ncat to not resolve IPs into domain names, so it 
- # will show only IPs
-```
-
-```sh
---send-only and --recv-only 
- #are options used to make a one-way 
- # communication, in order to be sure to not send anything to 
- # another IP or to not receive anything from an IP
-```
+* `--nodns`: tells ncat to not resolve IPs into domain names, so it will 
+    show only IPs
+* `--send-only` and `--recv-only`: are options used to make a one-way 
+    communication, in order to be sure to not send anything to another 
+    IP or to not receive anything from an IP
 
 ### File Transfers
 
