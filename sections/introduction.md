@@ -1,3 +1,4 @@
+# Introduction
 
 Ncat is a general-purpose command-line tool for reading, writing,
 redirecting, and encrypting data across a network. It aims to be

@@ -1,3 +1,4 @@
+# Usage as a Web Client
 
 ```sh
 ncat -C scanme.nmap.org 80
@@ -10,11 +11,11 @@ ncat -C scanme.nmap.org 80
 
 Let's see some examples of request:
 
-* In the case of HTTP/1.0
+- In the case of HTTP/1.0
 ```http
 GET /fileName HTTP/1.0
 ```
-* In the case of HTTP/1.1
+- In the case of HTTP/1.1
 ```http
 GET /fileName HTTP/1.1
 Host: nomeHost

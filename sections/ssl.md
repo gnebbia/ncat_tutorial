@@ -1,3 +1,4 @@
+# SSL/TLS
 
 Ncat can encrypt its traffic using SSL. In connect mode, simply
 add the --ssl option. Here is the syntax for connecting to an
@@ -60,14 +61,12 @@ ncat -C --hex-dump ssh-hex.log scanme.nmap.org 22
 
 an alternative could be sending a string to netcat, this can be
 done with:
-
 ```sh
 printf "HEAD / HTTP/1.0\r\n\r\n" | nc 10.1.1.2 80
 ```
 
 or if we want to save everything to a file we do:
-
 ```sh
-printf "HEAD / HTTP/1.0\r\n\r\n" |nc 10.1.1.2 80 > myfile.txt
+printf "HEAD / HTTP/1.0\r\n\r\n" | nc 10.1.1.2 80 > myfile.txt
 ```
 

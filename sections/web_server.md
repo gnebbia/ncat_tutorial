@@ -1,3 +1,4 @@
+# Usage as a Web Server
 
 ```sh
 ncat -l localhost 8080 < hello.http

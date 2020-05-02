@@ -1,3 +1,4 @@
+# Connection Brokering
 
 One of ncat's most useful and unique abilities is called "
 connection brokering". A listening ncat in broker mode accepts

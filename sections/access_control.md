@@ -1,3 +1,4 @@
+# Access Control
 
 A listening Ncat may control which hosts connect to it with the
 `--allow` and `--deny`, let's make some examples:
